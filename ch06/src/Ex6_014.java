@@ -1,0 +1,26 @@
+/*
+ * 날짜: 2021/05/10
+ * 내용: 자바의 정석_참조형 반환타입
+ * 이름: 김하린
+ * */ 
+class Data3 {int x;}
+
+public class Ex6_014 {	
+	public static void main(String[] args) {
+
+		Data3 d = new Data3();
+		d.x = 10;
+		
+		Data3 d2 = copy(d);
+		System.out.println("d.x ="+ d.x);
+		System.out.println("d2.x ="+ d2.x);
+		
+	}
+	
+	static Data3 copy(Data3 d) {
+		Data3 tmp = new Data3(); //새로운 객체 tmp 생성
+		tmp.x = d.x; //d.x값을 tmp.x에 복사
+		
+		return tmp; //객체 주소를 반환
+	}
+}
